@@ -18,7 +18,7 @@ import {
 import BreadcrumbPageClient from "~/components/sidebar/breadcrumb-page-client";
 
 export const metadata: Metadata = {
-  title: "AI Image Editor",
+  title: "Lumio AI",
   description: "AI Image Editor",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
