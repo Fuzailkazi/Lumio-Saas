@@ -47,7 +47,7 @@ export const auth = betterAuth({
         portal(),
         webhooks({
           // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-          secret: env.POLAR_ACCESS_TOKEN,
+          secret: env.POLAR_WEBHOOK_SECRET,
           onOrderPaid: async (order) => {
             const externalCustomerId = order.data.customer.externalId;
 
@@ -61,13 +61,13 @@ export const auth = betterAuth({
             let creditsToAdd = 0;
 
             switch (productId) {
-              case "43585d8b-a849-485c-a359-7773d185d8ef":
+              case "9e1f7dec-87b0-4041-8602-8ff9200adfb2":
                 creditsToAdd = 50;
                 break;
-              case "ba9b9094-3f22-4933-86f2-7d74cdcfbf52":
+              case "95f25d66-68d8-4d50-867a-3ccf942f9708":
                 creditsToAdd = 200;
                 break;
-              case "2c7735ec-5758-4c6a-8907-da76dced50b6":
+              case "068e7d87-d390-49d1-a0f4-3063d4a94df6":
                 creditsToAdd = 400;
                 break;
             }
